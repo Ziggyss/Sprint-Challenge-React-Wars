@@ -1,6 +1,6 @@
-import React from 'react';
+/* import React from 'react';
 
-function Character (props){
+function Character(props){
     return (
         <div>
             <p>
@@ -14,4 +14,4 @@ function Character (props){
     );
 };
 
-export default Character;
+export default Character; */

@@ -10,7 +10,7 @@ const App = () => {
   /* const [name, setName] = useState('');  */
  /*  const [birth, setBirth] = useState(''); */
  /* const [gender, setGender] = useState(''); */
-    const [character, setCharacter] = useState([]);
+    const [characterArray, setCharacterArray] = useState([]);
   // Fetch characters from the star wars api in an effect hook. Remember, anytime you have a 
   // side effect in a component, you want to think about which state and/or props it should
   // sync up with, if any.
@@ -20,10 +20,15 @@ const App = () => {
        axios
        .get(starWarsApi)
        .then(response => {
+         debugger
          console.log(response.data.results);
-         response.data.results.map(character => {
-           console.log(character);
-           setCharacter(response.data.results.character);
+         setCharacterArray(response.data.results);
+         console.log(characterArray);
+
+          /* response.data.results.map(character => {
+           console.log(character); */
+
+           /* setCharacter(response.data.results.character); */
          })
        })
        .catch(error => {
@@ -38,12 +43,12 @@ const App = () => {
   return (
     <div className="App">
       <h1 className="Header">React Wars</h1>
-      <Character 
+       {/* <Character 
               key={character.name}
               name={character.name}
               birth_date={character.birth_date}
               eye_color={character.eye_color}
-              hair_color={character.hair_color}/>
+              hair_color={character.hair_color}/> */}
       
     </div>
   );

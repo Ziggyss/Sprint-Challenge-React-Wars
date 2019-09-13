@@ -1,10 +1,14 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import axios from "axios";
-import CharacterList from './components/CharacterList';
+import CharacterList from "./components/CharacterList";
+import styled from "styled-components";
 
 const App = () => {
-  const starWarsApi = "https://swapi.co/api/people";
+  const starWarsApi = "https://lambda-github-api-server.herokuapp.com/";
+
+  /* "https://swapi.co/api/people"; */
+
   const [characterArray, setCharacterArray] = useState([]);
 
   useEffect(
@@ -12,7 +16,6 @@ const App = () => {
       axios
         .get(starWarsApi)
         .then(response => {
-          debugger;
           setCharacterArray(response.data.results);
         })
         .catch(error => {
@@ -24,10 +27,17 @@ const App = () => {
   return (
     <div className="App">
       <h1 className="Header">React Wars</h1>
-      <div>
-        <CharacterList characterArray={characterArray}/>
-      </div>
+      <Container>
+        <CharacterList characterArray={characterArray} />
+      </Container>
     </div>
   );
 };
+
+const Container = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+`;
+
 export default App;

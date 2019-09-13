@@ -1,6 +1,7 @@
-/* import React from 'react';
+import React from 'react';
 
 function Character(props){
+    const {name, birth_date, gender, eye_color, hair_color} = props;
     return (
         <div>
             <p>
@@ -14,4 +15,4 @@ function Character(props){
     );
 };
 
-export default Character; */
+export default Character; 

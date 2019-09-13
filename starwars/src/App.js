@@ -5,9 +5,7 @@ import CharacterList from "./components/CharacterList";
 import styled from "styled-components";
 
 const App = () => {
-  const starWarsApi = "https://lambda-github-api-server.herokuapp.com/";
-
-  /* "https://swapi.co/api/people"; */
+  const starWarsApi = "https://swapi.co/api/people";
 
   const [characterArray, setCharacterArray] = useState([]);
 

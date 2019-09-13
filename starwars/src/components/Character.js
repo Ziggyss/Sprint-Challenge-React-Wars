@@ -35,8 +35,8 @@ const CharacterTab = styled.div`
   border: solid black 2px;
   border-radius: 10px;
   color: black;
-  background: rgba(255,255,255,0.5);
-  box-shadow: 0px 10px 51px 0px rgba(0,0,0,0.75);
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0px 10px 51px 0px rgba(0, 0, 0, 0.75);
 `;
 
 export default Character;
